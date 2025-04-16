@@ -259,3 +259,13 @@
     margin-right: 0; /* Remove any default margin */
     width: 100%; /* Take full width of container */
   }
+
+  @media (min-width: 768px) {
+    .product-details-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    .thumbnail-images {
+      flex-direction: row;
+    }
+  }
