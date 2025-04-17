@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { FaUser, FaLock, FaGoogle, FaFacebook, FaApple } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 import '../Login/Login.css';
 import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
+import {getAuth, signInWithEmailAndPassword} from 'firebase/auth';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -11,6 +12,19 @@ const LoginPage = () => {
   const [rememberMe, setRememberMe] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+
+  const navigate = useNavigate()
+
+  const login= async()=>{
+    try{
+      await signInWithEmailAndPassword(getAuth(), email, password)
+      navigate("/")
+    }
+    catch(e){
+      setError(e.message)
+    }
+    
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -85,7 +99,7 @@ const LoginPage = () => {
               </div>
             </div>
 
-            <button type="submit" className="login-button" disabled={isLoading}>
+            <button type="submit" className="login-button" disabled={isLoading} onClick={login}>
               {isLoading ? 'Signing In...' : 'Sign In'}
             </button>
           </form>
