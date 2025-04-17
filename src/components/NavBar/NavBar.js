@@ -74,7 +74,7 @@ const Navbar = () => {
                 <a href="/login" className="login-btn">
                   <FaUser /> Login
                 </a>
-                <a href="/register" className="signup-btn">
+                <a href="/signup" className="signup-btn">
                   Sign Up
                 </a>
               </div>
