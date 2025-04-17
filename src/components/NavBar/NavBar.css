@@ -1,0 +1,244 @@
+/* Navbar.css - Optimized for minimal side spacing */
+:root {
+    --primary-color: #3a5a40;
+    --secondary-color: #588157;
+    --accent-color: #a3b18a;
+    --light-color: #dad7cd;
+    --dark-color: #344e41;
+    --text-color: #333;
+    --white: #fff;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .navbar {
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0.7rem 0;
+  }
+  
+  .navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  /* Main logo/toggle group */
+  .navbar-main-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    order: 1;
+  }
+  
+  .navbar-logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  
+  /* Secondary group (everything else) */
+  .navbar-secondary-group {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 1rem;
+    order: 2;
+    width: 100%;
+  }
+  
+  /* Navigation links */
+  .navbar-links {
+    flex: 1;
+  }
+  
+  .navbar-links ul {
+    display: flex;
+    list-style: none;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+  }
+  
+  .navbar-links a {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 0.3rem 0;
+  }
+  
+  /* Action group (search + auth) */
+  .navbar-action-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    justify-content: flex-end;
+  }
+  
+  /* Search bar */
+  .navbar-search {
+    min-width: 180px;
+    flex: 1;
+    max-width: 300px;
+  }
+  
+  .search-form {
+    display: flex;
+    width: 100%;
+  }
+  
+  .search-form input {
+    padding: 0.5rem 0.9rem;
+    border: 1px solid var(--light-color);
+    border-radius: 20px 0 0 20px;
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  
+  .search-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0 1rem;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+  }
+  
+  /* Auth buttons */
+  .navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+  
+  .cart-icon, .order-icon {
+    position: relative;
+    font-size: 1.2rem;
+    color: var(--text-color);
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .auth-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .login-btn, .signup-btn {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.85rem;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  
+  .login-btn {
+    border: 1px solid var(--light-color);
+    color: var(--text-color);
+  }
+  
+  .signup-btn {
+    background: var(--primary-color);
+    color: white;
+  }
+  
+  /* Mobile toggle */
+  .mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 992px) {
+    .navbar-container {
+      padding: 0 8px;
+      gap: 0.5rem;
+    }
+    
+    .navbar-secondary-group {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.7rem;
+    }
+    
+    .navbar-action-group {
+      justify-content: space-between;
+    }
+    
+    .navbar-search {
+      max-width: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-links {
+      display: none;
+      order: 2;
+    }
+    
+    .navbar-links.active {
+      display: block;
+      padding: 0.5rem 0;
+    }
+    
+    .navbar-links ul {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .mobile-menu-toggle {
+      display: block;
+    }
+    
+    .navbar-action-group {
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar-container {
+      padding: 0 6px;
+    }
+    
+    .auth-buttons {
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    
+    .login-btn, .signup-btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
