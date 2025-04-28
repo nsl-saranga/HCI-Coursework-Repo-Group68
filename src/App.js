@@ -10,6 +10,7 @@ import SignupPage from './Pages/Signup/Signup';
 import { CartProvider } from './context/CartContext';
 import OrderConfirmationPage from './Pages/OrderConfirmationPage/OrderConfirmationPage';
 import OrdersTrackingPage from './Pages/OrdersTrackingPage/OrdersTrackingPage';
+import NotFoundPage from './Pages/NotFoundPage/NotFoundPage';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
               <Route path="/orders" element={<OrdersTrackingPage/>} />
               <Route path="/login" element={<LoginPage/>} />
               <Route path="/register" element={<SignupPage/>} />
+              <Route path="*" element={<NotFoundPage />} />
               {/* Uncomment these when ready */}
               {/* <Route path='/:productType' element={<ProductsPage/>} />
               <Route path='/:product/details' element={<ViewProductsPage/>} />

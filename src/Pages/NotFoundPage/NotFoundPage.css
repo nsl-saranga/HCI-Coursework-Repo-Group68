@@ -1,0 +1,85 @@
+/* NotFoundPage.css */
+.notfound__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.notfound__content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.notfound__title {
+    font-size: 8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.notfound__subtitle {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-family: var(--header-font);
+}
+
+.notfound__message {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.notfound__btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.notfound__btn:hover {
+    background-color: #2d4a32;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .notfound__title {
+        font-size: 6rem;
+    }
+    
+    .notfound__subtitle {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .notfound__title {
+        font-size: 4rem;
+    }
+    
+    .notfound__subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .notfound__message {
+        font-size: 1rem;
+    }
+    
+    .notfound__btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+}
