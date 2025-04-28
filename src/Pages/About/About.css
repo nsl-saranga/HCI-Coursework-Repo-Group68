@@ -1,142 +1,142 @@
 /* About Us Page Styles */
 .about-hero__container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding-top: 3rem;
+}
+
+.about-hero__image img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.about-hero__content {
+  text-align: center;
+}
+
+.mission__container {
+  background-color: #f8f8f8;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.mission__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.values__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.value__card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.value__card h3 {
+  color: #3a5a40;
+  margin-bottom: 1rem;
+}
+
+.team__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.team__image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.process__steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.process__step {
+  position: relative;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.process__step span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #3a5a40;
+  color: white;
+  border-radius: 50%;
+  line-height: 40px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.process__step img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.visit__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.visit__image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+address {
+  font-style: normal;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .about-hero__container {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
   }
-  
-  .about-hero__image img {
-    width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  
+
   .about-hero__content {
-    text-align: center;
+    text-align: left;
   }
-  
-  .mission__container {
-    background-color: #f8f8f8;
-    padding: 4rem 1rem;
-    text-align: center;
-  }
-  
-  .mission__content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
+
   .values__grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin-top: 3rem;
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  .value__card {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    text-align: center;
-  }
-  
-  .value__card h3 {
-    color: #3a5a40;
-    margin-bottom: 1rem;
-  }
-  
-  .team__container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    align-items: center;
-  }
-  
-  .team__image img {
-    width: 100%;
-    border-radius: 8px;
-  }
-  
-  .process__steps {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin-top: 3rem;
-  }
-  
-  .process__step {
-    position: relative;
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    text-align: center;
-  }
-  
-  .process__step span {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background: #3a5a40;
-    color: white;
-    border-radius: 50%;
-    line-height: 40px;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-  
-  .process__step img {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin: 1rem 0;
-  }
-  
+
+  .team__container,
   .visit__container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
   }
-  
-  .visit__image img {
-    width: 100%;
-    border-radius: 8px;
+
+  .process__steps {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  address {
-    font-style: normal;
-    margin-top: 1rem;
-    line-height: 1.6;
-  }
-  
-  /* Responsive Design */
-  @media (min-width: 768px) {
-    .about-hero__container {
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-    }
-  
-    .about-hero__content {
-      text-align: left;
-    }
-  
-    .values__grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  
-    .team__container,
-    .visit__container {
-      grid-template-columns: 1fr 1fr;
-    }
-  
-    .process__steps {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  /* Keep your existing section__container and other global styles */
+}
+
+/* Keep your existing section__container and other global styles */
