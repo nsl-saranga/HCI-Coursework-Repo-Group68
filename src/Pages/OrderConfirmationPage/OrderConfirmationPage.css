@@ -1,0 +1,226 @@
+:root {
+    --primary-green: #3a5a40;
+    --dark-green: #344e41;
+    --light-green: #588157;
+    --text-dark: #333;
+    --text-medium: #555;
+    --text-light: #666;
+    --border-color: #eaeaea;
+    --light-bg: #f9f9f9;
+    --white: #fff;
+  }
+  
+  .confirmation-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .confirmation-card {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    margin: 2rem 0;
+  }
+  
+  .confirmation-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .confirmation-icon {
+    font-size: 5rem;
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+  }
+  
+  .confirmation-header h1 {
+    color: var(--primary-green);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .order-number {
+    font-size: 1.1rem;
+    color: var(--text-medium);
+    margin-bottom: 1rem;
+  }
+  
+  .confirmation-message {
+    color: var(--text-medium);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .order-details {
+    margin: 3rem 0;
+  }
+  
+  .details-section {
+    margin-bottom: 2.5rem;
+  }
+  
+  .details-section h2 {
+    color: var(--primary-green);
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .details-section p {
+    text-align: left;
+    margin-bottom: 1.5rem;
+  }
+
+  .icon-green {
+    color: var(--primary-green);
+  }
+  
+  .details-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .details-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .order-items {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .order-item {
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    align-items: center;
+  }
+  
+  .order-item:last-child {
+    border-bottom: none;
+  }
+  
+  .item-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .item-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+  }
+  
+  .item-info p {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 0.95rem;
+  }
+  
+  .item-price {
+    font-weight: bold;
+    color: var(--primary-green);
+  }
+  
+  address {
+    font-style: normal;
+    line-height: 1.6;
+  }
+  
+  address p {
+    text-align: left;
+  }
+  
+  .delivery-estimate {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.95rem;
+  }
+  
+  .order-totals {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+  
+  .grand-total {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .confirmation-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+  
+  @media (min-width: 576px) {
+    .confirmation-actions {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+  
+  .btn {
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+  
+  .btn-orders {
+    background: var(--primary-green);
+    color: var(--white);
+  }
+  
+  .btn-orders:hover {
+    background: var(--dark-green);
+  }
+  
+  .btn-continue {
+    background: var(--light-green);
+    color: var(--white);
+  }
+  
+  .btn-continue:hover {
+    background: var(--dark-green);
+  }
