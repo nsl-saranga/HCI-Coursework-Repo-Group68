@@ -5,8 +5,10 @@ import AboutUsPage from './Pages/About/About';
 import ProductDetailsPage from './Pages/ProductsDetails/ProductsDetails';
 import CartPage from './Pages/CartPage/CartPage';
 import CheckoutPage from './Pages/CheckoutPage/CheckoutPage';
+import LoginPage from './Pages/Login/Login';
+import SignupPage from './Pages/Signup/Signup';
 import { CartProvider } from './context/CartContext';
-import OrderConfirmationPage from './Pages/OrderConfirmationPage/OrderConfirmationOrder';
+import OrderConfirmationPage from './Pages/OrderConfirmationPage/OrderConfirmationPage';
 import OrdersTrackingPage from './Pages/OrdersTrackingPage/OrdersTrackingPage';
 
 
@@ -24,6 +26,8 @@ function App() {
               <Route path="/checkout" element={<CheckoutPage />} />
               <Route path="/order-confirmation" element={<OrderConfirmationPage />} />
               <Route path="/orders" element={<OrdersTrackingPage/>} />
+              <Route path="/login" element={<LoginPage/>} />
+              <Route path="/register" element={<SignupPage/>} />
               {/* Uncomment these when ready */}
               {/* <Route path='/:productType' element={<ProductsPage/>} />
               <Route path='/:product/details' element={<ViewProductsPage/>} />
