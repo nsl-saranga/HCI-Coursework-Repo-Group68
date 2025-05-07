@@ -189,12 +189,21 @@
   cursor: not-allowed;
 }
 
-.add-to-cart-btn {
+.buttons-container-product-details {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.add-to-cart-btn, .view-3-btn {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 1rem;
+  padding: 0.7rem;
+  width: 200px; /* Fixed width */
+  min-width: 200px; /* Prevent shrinking */
   background: #3a5a40;
   color: white;
   border: none;
@@ -205,7 +214,16 @@
   transition: background 0.3s;
 }
 
-.add-to-cart-btn:hover {
+/* Optional: Different color for 3D view button */
+.view-3-btn {
+  background: #2d3a4b; /* Different color for distinction */
+}
+
+.add-to-cart-btn.added {
+  background: #2d6a4f; /* Different color for added state */
+}
+
+.add-to-cart-btn:hover, .view-3-btn:hover {
   background: #344e41;
 }
 

@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { FaShoppingCart, FaStar, FaChevronLeft, FaCheck } from 'react-icons/fa';
+import { useParams, Link, useNavigate } from 'react-router-dom';
+import { FaShoppingCart, FaStar, FaChevronLeft, FaCheck} from 'react-icons/fa';
+import { FaCubes } from "react-icons/fa6";
 import products from '../../js/products';
 import { CartContext } from '../../context/CartContext';
 import '../ProductsDetails/ProductsDetails.css';
@@ -8,6 +9,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
 
 const ProductDetailsPage = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const product = products.find(p => p.id === parseInt(id));
   const [selectedColor, setSelectedColor] = useState(product.colors?.[0]);
@@ -29,6 +31,12 @@ const ProductDetailsPage = () => {
     setIsAddedToCart(true);
     setTimeout(() => setIsAddedToCart(false), 2000); // Reset after 2 seconds
   };
+
+
+  const handleView3D = () => {
+    navigate('/3d-tool')
+  };
+
 
   return (
     <>
@@ -112,22 +120,30 @@ const ProductDetailsPage = () => {
             </div>
 
             {/* Add to Cart Button */}
-            <button
-              className={`add-to-cart-btn ${isAddedToCart ? 'added' : ''}`}
-              onClick={handleAddToCart}
-              disabled={isAddedToCart}
-            >
-              {isAddedToCart ? (
-                <>
-                  <FaCheck /> Added to Cart!
-                </>
-              ) : (
-                <>
-                  <FaShoppingCart /> Add to Cart
-                </>
-              )}
-            </button>
+            <div className="buttons-container-product-details">
+              <button
+                className="view-3-btn"
+                onClick={handleView3D}
+              >
+                < FaCubes/> View in 3D/ 2D Room
+              </button>
 
+              <button
+                className={`add-to-cart-btn ${isAddedToCart ? 'added' : ''}`}
+                onClick={handleAddToCart}
+                disabled={isAddedToCart}
+              >
+                {isAddedToCart ? (
+                  <>
+                    <FaCheck /> Added to Cart!
+                  </>
+                ) : (
+                  <>
+                    <FaShoppingCart /> Add to Cart
+                  </>
+                )}
+              </button>
+            </div>
             {/* Product Details */}
             <div className="product-specs">
               <h3>Details</h3>

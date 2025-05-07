@@ -11,6 +11,7 @@ import { CartProvider } from './context/CartContext';
 import OrderConfirmationPage from './Pages/OrderConfirmationPage/OrderConfirmationPage';
 import OrdersTrackingPage from './Pages/OrdersTrackingPage/OrdersTrackingPage';
 import NotFoundPage from './Pages/NotFoundPage/NotFoundPage';
+import ThreeDToolPage from './Pages/3DToolPage/3DToolPage.js';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
               <Route path="/login" element={<LoginPage/>} />
               <Route path="/register" element={<SignupPage/>} />
               <Route path="*" element={<NotFoundPage />} />
+              <Route path="/3d-tool" element={<ThreeDToolPage/>} />
               {/* Uncomment these when ready */}
               {/* <Route path='/:productType' element={<ProductsPage/>} />
               <Route path='/:product/details' element={<ViewProductsPage/>} />
