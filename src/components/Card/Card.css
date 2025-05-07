@@ -191,7 +191,7 @@
   }
   
   /* Add to Cart Button */
-  .add-to-cart-btn {
+  .add-to-cart-btn-card {
     width: 100%;
     padding: 10px;
     background: #3a5a40;
@@ -207,7 +207,7 @@
     transition: background 0.3s ease;
   }
   
-  .add-to-cart-btn:hover {
+  .add-to-cart-btn-card:hover {
     background: #344e41;
   }
   

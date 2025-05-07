@@ -68,7 +68,7 @@ const Card = ({ product }) => {
           </div>
           
           <button 
-            className="add-to-cart-btn"
+            className="add-to-cart-btn-card"
             onClick={(e) => {
               handleInteractiveClick(e);
               // You might want to handle add to cart here or in details page

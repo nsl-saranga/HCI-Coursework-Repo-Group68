@@ -12,6 +12,7 @@ const LoginPage = () => {
   const [rememberMe, setRememberMe] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+  const [userRole, setUserRole] = useState('customer'); // Add role stat
 
   const navigate = useNavigate()
 
@@ -43,6 +44,33 @@ const LoginPage = () => {
     }, 1500);
   };
 
+
+    // Add role selection component
+    const RoleSelector = () => (
+      <div className="role-selection">
+        <label className="role-option">
+          <input
+            type="radio"
+            name="role"
+            value="customer"
+            checked={userRole === 'customer'}
+            onChange={(e) => setUserRole(e.target.value)}
+          />
+          <span className="role-label">Customer</span>
+        </label>
+        <label className="role-option">
+          <input
+            type="radio"
+            name="role"
+            value="admin"
+            checked={userRole === 'admin'}
+            onChange={(e) => setUserRole(e.target.value)}
+          />
+          <span className="role-label">Admin</span>
+        </label>
+      </div>
+    );
+
   return (
     <>
       <NavBar />
@@ -51,6 +79,12 @@ const LoginPage = () => {
           <div className="login-header">
             <h2>Welcome Back</h2>
             <p>Sign in to access your orders, wishlist, and account settings</p>
+          </div>
+
+              {/* Add Role Selector here */}
+              <div className="role-selection-wrapper">
+            <p>Select your role:</p>
+            <RoleSelector />
           </div>
 
           {error && <div className="error-message">{error}</div>}

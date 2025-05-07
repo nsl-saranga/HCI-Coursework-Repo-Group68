@@ -19,6 +19,8 @@ const SignupPage = () => {
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [userRole, setUserRole] = useState('customer'); // Add role stat
+  
 
   const navigate = useNavigate();
 
@@ -69,6 +71,33 @@ const SignupPage = () => {
     }
   };
 
+
+    // Add role selection component
+    const RoleSelector = () => (
+      <div className="role-selection">
+        <label className="role-option">
+          <input
+            type="radio"
+            name="role"
+            value="customer"
+            checked={userRole === 'customer'}
+            onChange={(e) => setUserRole(e.target.value)}
+          />
+          <span className="role-label">Customer</span>
+        </label>
+        <label className="role-option">
+          <input
+            type="radio"
+            name="role"
+            value="admin"
+            checked={userRole === 'admin'}
+            onChange={(e) => setUserRole(e.target.value)}
+          />
+          <span className="role-label">Admin</span>
+        </label>
+      </div>
+    );  
+
   if (success) {
     return (
       <>
@@ -100,6 +129,11 @@ const SignupPage = () => {
           <div className="auth-header">
             <h2>Create Your Account</h2>
             <p>Join us to start shopping</p>
+          </div>
+                  {/* Add Role Selector here */}
+                  <div className="role-selection-wrapper">
+            <p>Select your role:</p>
+            <RoleSelector />
           </div>
 
           <form onSubmit={handleSubmit} className="auth-form">

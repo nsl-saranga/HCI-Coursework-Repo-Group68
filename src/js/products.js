@@ -1,5 +1,12 @@
 
 import chair1Img from '../assets/chair1.png'
+import bedImg from '../assets/bed.jpg'
+import deskImg from '../assets/desk.jpg'
+import armImg from '../assets/arm.jpg'
+import sofaImg from '../assets/sofa.jpg'
+import coffeeImg from '../assets/coffee.jpg'
+import bookImg from '../assets/books.jpg'
+import diningImg from '../assets/dining.jpg'
 import product5Img from '../assets/product-5.png'
 import product3Img from '../assets/product-3.png'
 
@@ -30,7 +37,7 @@ const furnitureProducts = [
       id: 2,
       name: "Velvet Sofa",
       category: "Living Room",
-      image: chair1Img,
+      image: sofaImg,
       additionalImages: [product5Img, product3Img],
       rating: 5,
       reviews: 36,
@@ -52,7 +59,7 @@ const furnitureProducts = [
       id: 3,
       name: "Industrial Coffee Table",
       category: "Living Room",
-      image: chair1Img,
+      image: coffeeImg,
       additionalImages: [product5Img, product3Img],
       rating: 4,
       reviews: 18,
@@ -74,7 +81,7 @@ const furnitureProducts = [
       id: 4,
       name: "Minimalist Bookshelf",
       category: "Office",
-      image: chair1Img,
+      image: bookImg,
       additionalImages: [product5Img, product3Img],
       rating: 4,
       reviews: 42,
@@ -96,7 +103,7 @@ const furnitureProducts = [
       id: 5,
       name: "Upholstered Bed Frame",
       category: "Bedroom",
-      image: chair1Img,
+      image: bedImg,
       additionalImages: [product5Img, product3Img],
       rating: 5,
       reviews: 29,
@@ -118,7 +125,7 @@ const furnitureProducts = [
       id: 6,
       name: "Dining Table Set",
       category: "Dining",
-      image: chair1Img,
+      image: diningImg,
       additionalImages: [product5Img, product3Img],
       rating: 4,
       reviews: 31,
@@ -140,7 +147,7 @@ const furnitureProducts = [
       id: 7,
       name: "Accent Armchair",
       category: "Living Room",
-      image: chair1Img,
+      image: armImg,
       additionalImages: [product5Img, product3Img],
       rating: 4,
       reviews: 15,
@@ -162,7 +169,7 @@ const furnitureProducts = [
       id: 8,
       name: "Executive Desk",
       category: "Office",
-      image: chair1Img,
+      image: deskImg,
       additionalImages: [product5Img, product3Img],
       rating: 5,
       reviews: 27,

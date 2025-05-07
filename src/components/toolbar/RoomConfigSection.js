@@ -67,6 +67,8 @@ const RoomConfigSection = () => {
           <option value="dining">Dining Room</option>
           <option value="bedroom">Bedroom</option>
           <option value="office">Home Office</option>
+          <option value="bedroom">Class Room</option>
+          <option value="office"></option>
         </select>
       </div>
       
