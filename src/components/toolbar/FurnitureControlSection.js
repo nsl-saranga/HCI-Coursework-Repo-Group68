@@ -134,10 +134,15 @@ const FurnitureControlSection = () => {
         <label className="toolbar-text">Select Furniture:</label>
         <select id="furnitureType" value={selectedFurniture || ""} onChange={handleFurnitureTypeChange}>
           <option value="">Choose...</option>
-          <option value="chair">Chair</option>
-          <option value="table">Table</option>
-          <option value="sofa">Sofa</option>
-          <option value="lamp">Lamp</option>
+          <option value="chair">Wooden Chair</option>
+          <option value="table">Coffee Table (Wood)</option>
+          <option value="sofa">Corner Sofa</option>
+          <option value="lamp">Floor Lamp</option>
+          <option value="armchair">Leather Armchair</option>
+          <option value="stool">Velvet Sofa</option>
+          <option value="stool">Radio Stool</option>
+          <option value="stool">Accent Chair</option>
+          <option value="stool">Magazine Rack</option>
         </select>
       </div>
       <p className="hint">Click anywhere in the room to place selected furniture</p>
